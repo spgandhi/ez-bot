@@ -1,0 +1,20 @@
+/* CSS declarations go here */
+
+.user-chat{
+    background: rgb(176,182,186);
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    margin: 3px 0;
+    
+}
+
+.bot-chat{
+    background: rgb(91,186,92);
+    padding: 10px;
+    border-radius: 7px;
+    color: white;
+    margin: 10px 0;
+
+}
+

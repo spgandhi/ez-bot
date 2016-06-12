@@ -1,0 +1,62 @@
+<div style="margin:20px">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Unique Name</label>
+    <span class="red">*</span>
+    <input type="text" class="form-control" ng-model="newQuestion.uniqueName">
+  </div>
+
+	<div class="form-group">
+      <label for="exampleInputEmail1">Type</label>
+      <span class="red">*</span>
+      <select ng-model="newQuestion.type">
+      	<option value="0">Exact Question</option>
+      	<option value="1">Tags Based</option>
+      </select>
+    </div>
+
+    
+
+    <div class="form-group" ng-show="!newQuestion.type || newQuestion.type==0">
+      <label for="exampleInputEmail1">Question</label>
+      <span class="red">*</span>
+      <input type="text" class="form-control" ng-model="newQuestion.question">
+    </div>
+
+    <div class="form-group" ng-show="newQuestion.type==1">
+      <label for="exampleInputEmail1">Tags</label>
+      <span class="red">*</span>
+      <input type="text" class="form-control" id="questionsTags">
+    </div>
+
+    <script type="text/javascript">
+      $('#questionsTags').tokenfield();
+    </script>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Response</label>
+      <span class="red">*</span>
+      <input type="text" class="form-control" ng-model="newQuestion.response">
+    </div>
+
+    <input type="button" ng-click="addQuestion()" value="update" class="btn btn-primary">
+
+    <table borders="1" class="table" style="margin-top:30px">
+      
+      <tr>
+        <th style="width:10%">Type</th>
+        <th style="width:20%">Unique Keyword</th>
+        <th style="width:30%">Question</th>
+        <th style="width:30%">Response</th>
+      </tr>
+
+      <tr ng-repeat="question in questions">
+        <td>{{question.type}}</td>
+        <td>{{question.uniqueName}}</td>
+        <td>{{question.question}}</td>
+        <td>{{question.response}}</td>
+      </tr>
+     
+     </table>
+
+</div>

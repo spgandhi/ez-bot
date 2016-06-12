@@ -1,0 +1,36 @@
+<head>
+  <title>EZ-Bot.Smith | Create Your Own Bot</title>
+</head>
+
+<body>
+<!-- <ui-view></ui-view> -->
+   <div ng-app="basehack" ng-controller="Main" class="container">
+
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead" ng-show="currentUser">
+        <h3 class="text-muted">EZ-Bot.Smith<span class="pull-right">EZ-Bot.Smith ID: {{currentUser._id}}</span></h3>
+        
+      </div>
+
+      <div>
+        <nav ng-show="currentUser">
+          <ul class="nav nav-justified">
+            <li><a href="/#/profile">Profile</a></li>
+            <li><a href="/#/profile/questions">Questions/Answers</a></li>
+            <li><a href="/#/bot">Bot</a></li>
+            <li><a ng-click="logout()">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <ui-view style="display: block; margin: 20px 10px;">
+      </ui-view>
+
+      <!-- Site footer -->
+      <footer class="footer">
+        <center><p>&copy; 2016 EZ-Bot.Smith, Inc.</p></center>
+      </footer>
+
+    </div> <!-- /container -->
+</body>

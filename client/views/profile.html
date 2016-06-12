@@ -1,0 +1,37 @@
+<div style="margin:20px">
+
+    <!-- Tab panes -->
+   <div class="tab-content" style="margin:20px">
+      
+      <div role="tabpanel" class="tab-pane active" id="home">
+
+         <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <span class="red">*</span>
+          <input type="text" class="form-control" ng-model="currentUser.profile.name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1" >Email address</label>
+          <span class="red">*</span>
+          <input type="email" class="form-control" ng-model="currentUser.emails[0].address"  ng-readonly="true">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1" readonly>Bot Name</label>
+          <span class="red">*</span>
+          <input type="text" class="form-control" ng-model="currentUser.profile.botname" ng-readonly="true">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1" readonly>Greetings!</label>
+          <span class="red">*</span>
+          <input type="text" class="form-control" ng-model="currentUser.profile.greetings">
+        </div>
+
+      </div>
+
+      <button class="btn-primary btn" ng-click="update()">Update</button>
+
+</div>
+</div>
